@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>underscroe demo</title>
+</head>
+<body>
+<script src="./underscore.js"></script>
+<script>
+    
+    const arr = [1,2,4,2,6,43,32,1,'a','A'];
+    console.log(
+        _.unique(arr, function(val){
+            return typeof val === 'string' ? val.toLowerCase() : val;
+        })
+    );
+    console.log(
+        _(arr).unique(
+            function(val){
+                return typeof val === 'string' ? val.toLowerCase() : val;
+            }
+        )
+    );
+
+</script>
+</body>
+</html>
